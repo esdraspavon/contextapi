@@ -7,7 +7,19 @@ class Team extends Component {
     return (
       <TheLigueContext.Consumer>
         {value => {
-          console.log(value);
+          return Object.keys(value.state).map(idTeam => (
+            <li
+              className="list-group-item d-flex justify-content-between align-items-center"
+              key={idTeam}
+            >
+              <p className="m-0">
+                {value.state[idTeam].name}
+                <span className="ml-4 badge badge-danger">
+                  {value.state[idTeam].titles}
+                </span>
+              </p>
+            </li>
+          ));
         }}
       </TheLigueContext.Consumer>
     );
@@ -15,9 +27,3 @@ class Team extends Component {
 }
 
 export default Team;
-{
-  /* <li className="list-group-item d-flex justify-content-between align-items-center">
-        <p className="m-0">{name}</p>
-        <span className="badge badge-danger">{titles}</span>
-      </li> */
-}
