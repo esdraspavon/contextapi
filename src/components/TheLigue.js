@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 //Crear el context
 const TheLigueContext = React.createContext();
-
+export { TheLigueContext };
 class TheLigue extends Component {
   state = {
     teams: [
