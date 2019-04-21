@@ -22,7 +22,14 @@ class TheLigue extends Component {
   };
   render() {
     return (
-      <TheLigueContext.Provider value={{ state: this.state.teams }}>
+      <TheLigueContext.Provider
+        value={{
+          state: this.state.teams,
+          isChampion: id => {
+            console.log(id);
+          }
+        }}
+      >
         {this.props.children}
       </TheLigueContext.Provider>
     );
