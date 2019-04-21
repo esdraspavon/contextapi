@@ -2,25 +2,25 @@ import React, { Component } from "react";
 import Teams from "./components/Teams";
 class App extends Component {
   state = {
-    equipos: [
+    teams: [
       {
-        nombre: "Real Madrid",
-        titulos: 35
+        name: "Real Madrid",
+        titles: 35
       },
       {
-        nombre: "Barcelona",
-        titulos: 25
+        name: "Barcelona",
+        titles: 25
       },
       {
-        nombre: "Atlético de Madrid",
-        titulos: 10
+        name: "Atlético de Madrid",
+        titles: 10
       }
     ]
   };
   render() {
     return (
       <div className="container">
-        <Teams />
+        <Teams teams={this.state.teams} />
       </div>
     );
   }
