@@ -26,7 +26,11 @@ class TheLigue extends Component {
         value={{
           state: this.state.teams,
           isChampion: id => {
-            console.log(id);
+            const teams = { ...this.state.teams };
+
+            teams[id].titles++;
+
+            this.setState({ teams });
           }
         }}
       >
